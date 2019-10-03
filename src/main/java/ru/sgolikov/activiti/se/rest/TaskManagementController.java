@@ -6,6 +6,10 @@ import org.activiti.api.task.model.Task;
 import org.activiti.api.task.model.builders.TaskPayloadBuilder;
 import org.activiti.api.task.runtime.TaskAdminRuntime;
 import org.activiti.api.task.runtime.TaskRuntime;
+import org.activiti.engine.ProcessEngine;
+import org.activiti.engine.RuntimeService;
+import org.activiti.engine.runtime.Execution;
+import org.activiti.engine.task.TaskQuery;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,6 +60,9 @@ public class TaskManagementController {
 			.withTaskId(taskId).build());
 		logger.info(">>> Completed Task: " + taskId);
 
+
+
 		return "Completed Task: " + taskId;
 	}
+
 }
